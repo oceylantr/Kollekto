@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car chooser</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#btn_golf").click(function(e){
+          $.get( "http://localhost:8066/click/Golf", function( data ) {
+		  	$("#result").html(data);
+		  });
+      });
+      $("#btn_polo").click(function(e){
+          $.get( "http://localhost:8066/click/Polo", function( data ) {
+		  	$("#result").html(data);
+		  });
+      });
+      $("#btn_jetta").click(function(e){
+          $.get( "http://localhost:8066/click/Jetta", function( data ) {
+		  	$("#result").html(data);
+		  });
+      });
+    });
+    </script>
+</head>
+<body>
+	<button id="btn_golf">Golf</button>
+	<button id="btn_polo">Polo</button>
+	<button id="btn_jetta">Jetta</button>
+	<br/>
+	<div id="result"></div>
+</body>
+</html>
