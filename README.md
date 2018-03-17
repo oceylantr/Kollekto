@@ -6,6 +6,8 @@ As usual, We need a DB, a backend for serving, a fronend for consuming. All will
 
 I choose InfluxDB for saving data; it is a special timeseries DB with great performance on listings. Also InfluxData team bounded Telegraf for transmitting data, Kapacitor for alerting, Chronograf for admin, data monitoring and graphing tool like Graphana in a stack.
 
+How will DB and backend will communicate? Answer is Statsd plugin of Telegraf. We are sending commands like "nc xx to this network" with Lynx plugin from NPM and use it to send metrics values to Statsd server living via a plugin inside Telegraf.
+
 In server-side part, I am giving vote to HapiJS for shortening development time; it is easy to add a new route in seconds. Built in WalmartLabs to fix performance problems in days of going crazy of market.
 
 Using a simple frontend page to make ajax-get calls to Hapi backend.
