@@ -77,7 +77,7 @@ Add additional notes about how to deploy this on a live system
 
 ## License
 
-This project is licensed under the GPL v3.0 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL v3.0 - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
