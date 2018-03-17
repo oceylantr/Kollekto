@@ -75,8 +75,6 @@ Add additional notes about how to deploy this on a live system
 
 * **Oğuzhan Ceylan** - *Initial work* - [oceylantr](https://github.com/oceylantr)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the GPL v3.0 - see the [LICENSE.md](LICENSE.md) file for details
