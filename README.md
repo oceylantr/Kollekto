@@ -25,7 +25,27 @@ Using a simple frontend page to make ajax-get calls to Hapi backend.
 
 3- Chmod -R 777 (a general precaution for not struggling with permissions)
 
+4- Git
+
 ### Installing
+
+Download code with below command on your working directory:
+
+```
+sudo git clone https://github.com/oceylantr/Kollekto.git
+```
+
+Give all permission for passing security phase now:
+
+```
+sudo chmod -R 777 Kollekto
+```
+
+Get in the code 
+
+```
+cd Kollekto
+```
 
 Firstly, we have code at backend part waiting for build
 
@@ -61,9 +81,23 @@ Check localhost:8066 in browser on your host OS. If it is saying like "Selam dok
 
 Check localhost:8888 in browser on your host OS. It should be coming, Chronograf's black, kool page
 
-## Deployment
+## Configuring Showcase
 
-Add additional notes about how to deploy this on a live system
+Open localhost/index.htm and make 3 sets of moves:
+
+![alt text](client.png)
+
+In each set you will click Golf, Polo and Jetta buttons few times and wait for a 10-15 seconds until new set. We are making this for Telegraf to transfer clickstream values in periods, that peroiding is one of main features of timeseries db's
+
+Now everything is ready to make good-lookin graphs on Chronograf. Please open localhost:8888 and go to Dashboards link at left. Create a dashboard and add a Graph. Below Cell Editor, with Plus button make 3 queries and fill them with below sequentially
+
+```
+SELECT "value" FROM "telegraf"."autogen"."Golf" WHERE time > :dashboardTime:
+SELECT "value" FROM "telegraf"."autogen"."Polo" WHERE time > :dashboardTime:
+SELECT "value" FROM "telegraf"."autogen"."Jetta" WHERE time > :dashboardTime:
+```
+
+![alt text](result.png)
 
 ## Built With
 
