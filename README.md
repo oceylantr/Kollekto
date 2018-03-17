@@ -12,6 +12,7 @@ In server-side part, I am giving vote to HapiJS for shortening development time;
 
 Using a simple frontend page to make ajax-get calls to Hapi backend.
 
+Full code detail at http://oguzhanceylan.com/2018/03/17/kollekto-an-initial-containerized-clickstream-app-with-hapijs-nodejs-influxdb-and-chronograf/
 
 ## Getting Started
 
